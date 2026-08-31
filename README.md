@@ -1,21 +1,33 @@
-# BuildFlow — Construction Management Suite
+# EJ PNG Limited — Management System
 
-React + Vite construction management MVP.
+EJ PNG Limited branded React + Vite operations platform for construction and related business workflows.
 
-## Included
-- Portfolio dashboard
-- Projects, budgets, spend and progress
-- Project search
+## Current build
+- EJ PNG branded secure login foundation
+- Responsive executive dashboard
+- Project portfolio, progress, budgets and spend
+- Customers
+- Quotations
+- Jobs & work orders
+- Inventory for construction/printing/signage materials
+- Invoicing
+- Suppliers
+- Schedule
+- Budget & Costs
+- Safety
+- Reports
+- Search and responsive navigation
 - Create-project workflow
-- Tasks and recent activity
-- Responsive navigation
-- Scaffolded Schedule, Documents, Procurement, People and Safety modules
+- PGK financial display
 
-## Run
+## Run locally
 ```bash
 npm install
 npm run dev
 ```
 
-## Production roadmap
-Authentication/RBAC, database persistence, Gantt scheduling, RFIs, submittals, drawing revisions, daily site reports, procurement/POs, contracts and variations, payment claims, safety inspections/incidents, document storage, notifications and audit history.
+## Architecture roadmap
+The next production layer should connect the UI to a real database and API, then add authentication/roles, persistent customers/projects, quotation-to-job conversion, purchase orders, stock movements, invoices/payments, project Gantt scheduling, RFIs, variations, daily site reports, document storage, approvals, notifications and audit history.
+
+## Branding
+The interface uses an EJ PNG Limited-inspired gold/navy treatment and the supplied company identity as the visual reference.
