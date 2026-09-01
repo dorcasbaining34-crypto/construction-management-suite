@@ -1,0 +1,13 @@
+{
+  "roles": [
+    {"id":"admin","name":"System Administrator","description":"Full system access and user/permission administration","permissions":["*"]},
+    {"id":"director","name":"Director / Management","description":"Management dashboards, financials and reports","permissions":["dashboard.view","projects.view","projects.create","projects.edit","customers.view","customers.edit","quotations.view","quotations.create","quotations.approve","jobs.view","jobs.create","jobs.edit","inventory.view","inventory.edit","invoices.view","invoices.create","payments.view","reports.view","reports.export","employees.view"]},
+    {"id":"project_manager","name":"Project Manager","description":"Project delivery, workforce, tasks and site controls","permissions":["dashboard.view","projects.view","projects.create","projects.edit","customers.view","quotations.view","jobs.view","jobs.create","jobs.edit","inventory.view","inventory.request","reports.view","reports.export","employees.view","employees.assign","safety.view","safety.create"]},
+    {"id":"accounts","name":"Accounts / Finance","description":"Quotes, invoices, payments, budgets and financial reports","permissions":["dashboard.view","customers.view","customers.edit","quotations.view","quotations.create","quotations.edit","quotations.approve","invoices.view","invoices.create","invoices.edit","payments.view","payments.create","budget.view","budget.edit","reports.view","reports.export"]},
+    {"id":"hr","name":"HR / Administration","description":"Employee records and workforce administration","permissions":["dashboard.view","employees.view","employees.create","employees.edit","employees.assign","employees.documents","reports.view","reports.export"]},
+    {"id":"operations","name":"Operations / Supervisor","description":"Jobs, work orders, stock and site operations","permissions":["dashboard.view","projects.view","jobs.view","jobs.create","jobs.edit","inventory.view","inventory.request","employees.view","employees.assign","safety.view","safety.create","reports.view"]},
+    {"id":"staff","name":"Staff","description":"Assigned tasks and operational information only","permissions":["dashboard.view","projects.view","jobs.view","inventory.view","employees.view","safety.view"]},
+    {"id":"contractor","name":"Contractor / Subcontractor","description":"Restricted access to assigned projects and work orders","permissions":["projects.view","jobs.view","jobs.update_assigned","documents.view_assigned","safety.view"]}
+  ],
+  "security": {"session_minutes":60,"require_password":true,"audit_log":true,"least_privilege":true}
+}
