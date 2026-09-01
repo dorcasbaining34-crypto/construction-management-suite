@@ -1,0 +1,9 @@
+{
+  "users": [
+    {"id":"U-001","name":"System Administrator","email":"admin@ejpng.com","role":"admin","status":"Active"},
+    {"id":"U-002","name":"Management User","email":"management@ejpng.com","role":"director","status":"Active"},
+    {"id":"U-003","name":"Accounts User","email":"accounts@ejpng.com","role":"accounts","status":"Active"},
+    {"id":"U-004","name":"HR User","email":"hr@ejpng.com","role":"hr","status":"Active"},
+    {"id":"U-005","name":"Operations User","email":"operations@ejpng.com","role":"operations","status":"Active"}
+  ]
+}
