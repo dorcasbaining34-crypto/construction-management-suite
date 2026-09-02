@@ -3,5 +3,6 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/construction-management-suite/'
+  // Vercel serves this app at the domain root, not under /construction-management-suite/.
+  base: '/'
 });
