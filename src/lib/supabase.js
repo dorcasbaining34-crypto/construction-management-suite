@@ -1,10 +1,12 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Supabase's current browser setup for Vite/React uses the project URL and
-// publishable key. The publishable key is safe for browser use when RLS is
-// correctly configured; never expose a secret/service-role key here.
+// Browser-safe Supabase configuration for Vite/React.
+// Prefer the current publishable key, but keep backward compatibility with
+// the existing VITE_SUPABASE_ANON_KEY variable during the transition.
 const url = import.meta.env.VITE_SUPABASE_URL;
-const publishableKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+const publishableKey =
+  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
+  import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 export const supabase = url && publishableKey
   ? createClient(url, publishableKey, {
@@ -19,7 +21,7 @@ export const supabase = url && publishableKey
 export async function signIn(email, password) {
   if (!supabase) {
     throw new Error(
-      'Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY.'
+      'Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY in Vercel.'
     );
   }
   return supabase.auth.signInWithPassword({ email, password });
